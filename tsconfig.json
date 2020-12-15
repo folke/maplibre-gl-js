@@ -1,10 +1,9 @@
 {
   "compilerOptions": {
-    "allowJs": true,
+    "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "checkJs": false,
     "declaration": true,
-    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "importHelpers": false,
     "isolatedModules": true,
@@ -17,10 +16,22 @@
     "sourceMap": true,
     "strict": false,
     "target": "ES6",
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable",
+      "WebWorker"
+    ],
     "outDir": "lib",
     "rootDir": "src",
-    "lib": ["ESNext", "DOM", "DOM.Iterable", "WebWorker"]
   },
-  "include": ["src/**/*.ts", "typings/*.ts"],
-  "exclude": ["node_modules", "lib", "dist"]
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "dist"
+  ]
 }
