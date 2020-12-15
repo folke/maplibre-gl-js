@@ -112,7 +112,8 @@
     "tap-parser": "^10.0.1",
     "tape": "^4.13.2",
     "tape-filter": "^1.0.4",
-    "testem": "^3.0.0"
+    "testem": "^3.0.0",
+    "typescript": "^4.1.3"
   },
   "browser": {
     "./src/shaders/index.js": "./src/shaders/shaders.js",
