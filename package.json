@@ -161,7 +161,10 @@
   },
   "esm": true,
   "scripts": {
-    "migrate": "build/flow-to-ts.sh",
+    "maplibre:migrate": "build/flow-to-ts.sh",
+    "maplibre:ts": "npx tsc --noEmit -p .",
+    "maplibre:lint": "npx eslint src --ext .ts",
+    "maplibre:lint:fix": "npx eslint src --ext .ts --fix",
     "build-dev": "rollup -c --environment BUILD:dev",
     "watch-dev": "rollup -c --environment BUILD:dev --watch",
     "build-prod": "rollup -c --environment BUILD:production",

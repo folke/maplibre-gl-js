@@ -5,5 +5,8 @@ die() {
   exit 1
 }
 
+echo "Running flowts"
 npx flowts --no-allow-js --no-prettier src || die "could not migrate src"
-npx flowts --no-allow-js --no-prettier flow-typed || die "could not migrate flow-typed"
+
+echo "Running eslint --fix"
+yarn maplibre:lint:fix
